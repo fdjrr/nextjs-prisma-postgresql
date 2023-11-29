@@ -7,6 +7,8 @@ import UpdateProduct from "./updateProduct";
 
 const prisma = new PrismaClient();
 
+export const dynamic = "force-dynamic";
+
 const getProducts = async () => {
   const products = await prisma.product.findMany({
     select: {
